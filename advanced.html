@@ -17,7 +17,33 @@
         </nav>
     </header>
 
-    <main>ADVANCED</main>
+    <main>
+        <section>
+            <div class="title__wrapper">
+                <p class="title">Advanced Search</p>
+            </div>
+
+
+
+            <div>
+                <p>Find pages with…</p>
+            </div>
+
+            <form class="form" action="https://www.google.com.ua/search">
+                <!-- <input type="hidden" name="tbm" value="isch" /> -->
+                <label for="allWords">all these words:</label>
+                <input type="text" name="allWords">
+                <label for="exactWord">this exact word or phrase:</label>
+                <input type="text" name="exactWord">
+                <label for="anyWord">any of these words:</label>
+                <input type="text" name="anyWord">
+                <label for="noneWord">none of these words:</label>
+                <input type="text" name="noneWord">
+                <!-- <input class="form__input" type="text" name="q">
+                <input class="form__button" type="submit" value="Search"> -->
+            </form>
+        </section>
+    </main>
 
     <footer class="footer">
         <p>2023</p>
