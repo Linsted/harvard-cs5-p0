@@ -1,3 +1,9 @@
+:root {
+  --mainBlue: #4487f6;
+  --secondaryGrey: #dfe1e5;
+  --white: fff;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -34,7 +40,7 @@ main {
   &:hover,
   &:focus,
   &:active {
-    color: rgb(59, 124, 246);
+    color: var(--mainBlue);
   }
 }
 
@@ -57,7 +63,7 @@ main {
 }
 
 .hero__hint {
-  color: #4487f6;
+  color: var(--mainBlue);
   position: absolute;
   left: 215px;
   bottom: 0;
@@ -65,7 +71,7 @@ main {
 }
 
 .title__wrapper {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--secondaryGrey);
 }
 
 .title {
@@ -87,17 +93,39 @@ main {
   padding-inline: 16px;
   height: 40px;
   outline: none;
-  border: 1px solid #dfe1e5;
+  border: 1px solid var(--secondaryGrey);
   box-shadow: none;
   border-radius: 24px;
   transition: all 0.3s;
   width: 100%;
+
   &:hover,
   &:focus,
   &:active {
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
     border-color: rgba(223, 225, 229, 0);
+  }
+}
+
+.form__wrapper {
+  padding-left: 35px;
+}
+
+.form__input--wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form__input--advanced {
+  width: 400px;
+  border: 1px solid var(--secondaryGrey);
+  transition: outline 0.2s;
+
+  &:active,
+  &:focus {
+    outline: 1px solid var(--mainBlue);
   }
 }
 
@@ -116,11 +144,26 @@ main {
   cursor: pointer;
   transition: all 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
-    border: 1px solid #dadce0;
+    border: 1px solid var(--secondaryGrey);
     color: #202124;
+  }
+}
+
+.form__button--advanced {
+  background-color: var(--mainBlue);
+  color: var(--white);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #1360e3;
+
+    color: var(--white);
   }
 }
 
